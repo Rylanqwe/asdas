@@ -27,13 +27,32 @@
         font-weight: bold;
         padding: 20px 40px;
         border: 2px solid gold;
+        margin-bottom: 20px;
+      }
+      
+      #result {
+        font-size: 18px;
+        color: white;
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Crypto City Casino</h1>
-      <button>Enter</button>
+      <button onclick="flip()">Flip</button>
+      <div id="result"></div>
     </div>
+    
+    <script>
+      function flip() {
+        var result = Math.floor(Math.random() * 2 + 1);
+        if (result === 1) {
+          document.getElementById("result").innerHTML = "Heads";
+        } else {
+          document.getElementById("result").innerHTML = "Tails";
+        }
+      }
+    </script>
   </body>
 </html>
